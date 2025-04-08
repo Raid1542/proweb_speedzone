@@ -36,6 +36,7 @@ Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']
 # Route Kelompok 7 #
 // Route Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+
 // Route Dashboard
 
 // Route List Item
