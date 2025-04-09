@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\LoginController;
 use App\Htpp\Controllers\ListItemController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,6 +39,7 @@ Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 // Route Dashboard
+Route::get('dashboard/{nama}/{warna}/{harga}/{stok}', [DashboardController::class , 'dashboard']);
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
