@@ -7,7 +7,7 @@ use App\Htpp\Controllers\ListItemController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('praktikum_5');
 });
 
 Route::get('/welcome', function () {
@@ -43,3 +43,4 @@ Route::get('dashboard/{nama}/{warna}/{harga}/{stok}', [DashboardController::clas
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
+
