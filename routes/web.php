@@ -48,12 +48,17 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
 
+//Produk
+Route::get('/produk', function () {
+    return view('produk');
+});
+
 # Route Kelompok 7 #
 // Route Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 // Route Dashboard
-Route::get('dashboard/{nama}/{warna}/{harga}/{stok}', [DashboardController::class , 'dashboard']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
