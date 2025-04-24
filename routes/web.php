@@ -6,23 +6,18 @@ use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\LoginController;
 use App\Htpp\Controllers\ListItemController;
 use App\Http\Controllers\DashboardController;
-
-Route::get('/', function () {
-    return view('praktikum_5');
-});
+use App\Http\Controllers\ListProductController;
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/', function () {
+    return view('praktikum_5');
+});
 
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [AuthController::class, 'register']);
+Route::get('/list_produk', [ListProductController::class, 'show']);
 
-Route::get('/reset-password', [AuthController::class, 'showResetPasswordForm'])->name('password.reset');
-Route::post('/reset-password', [AuthController::class, 'updatePassword'])->name('password.update');
 
 Route::get('/slebew', function () {
     return view('gambar');
@@ -62,3 +57,15 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
+
+Route::get('/home11', function () {
+    return view('pages11/home11');
+});
+
+Route::get('/home022', function () {
+    return view('pages/home22');
+});
+
+Route::get('/home16', function () {
+    return view('pages16.home16');
+});
