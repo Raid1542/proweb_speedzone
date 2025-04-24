@@ -57,15 +57,3 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
-
-Route::get('/home11', function () {
-    return view('pages11/home11');
-});
-
-Route::get('/home022', function () {
-    return view('pages/home22');
-});
-
-Route::get('/home16', function () {
-    return view('pages16.home16');
-});
