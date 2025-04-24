@@ -62,3 +62,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Route List Item
 Route::get('/listitem/{id}/{nama_item}', [ListBarangController::class, 'tampilkan']);
+
