@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Htpp\Controllers\ListItemController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ListProductController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -69,3 +70,6 @@ Route::get('/home022', function () {
 Route::get('/home16', function () {
     return view('pages16.home16');
 });
+
+
+Route::get('/product', [ProductController::class,'index']);
